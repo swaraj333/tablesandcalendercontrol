@@ -6,15 +6,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.openqa.selenium.support.ui.Select;
 
 public class freecrm {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		WebDriver driver= new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://classic.crmpro.com/login.cfm/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//*[@id='loginForm']/input[1]")).sendKeys("swaraj");

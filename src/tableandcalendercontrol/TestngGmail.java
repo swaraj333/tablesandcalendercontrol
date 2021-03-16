@@ -64,8 +64,8 @@ public class TestngGmail {
 //}
 	@BeforeMethod
 	public void gmaillogin() throws InterruptedException{
-		System.setProperty("webdriver.chrome.driver","C:/Users/swaraj/Downloads/chromedriver_win32/chromedriver.exe");
-		 driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

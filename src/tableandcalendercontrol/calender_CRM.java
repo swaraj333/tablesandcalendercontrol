@@ -7,12 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.server.browserlaunchers.Sleeper;
+
 import org.openqa.selenium.support.ui.Select;
 
 public class calender_CRM {
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver","C:/Users/swaraj/Downloads/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		 String date,month,year;
 		String DOJ="18/November/2019";
@@ -29,7 +29,7 @@ public class calender_CRM {
 		
 		driver.findElement(By.name("username")).sendKeys("swaraj");
 		driver.findElement(By.name("password")).sendKeys("swaraj"); 
-		Sleeper.sleepTightInSeconds(5);
+		
 		driver.findElement(By.xpath("//input[@class='btn btn-small']")).click();
 		driver.switchTo().frame("mainpanel");
 		Select month_select=new Select(driver.findElement(By.xpath("//select[@name='slctMonth']")));

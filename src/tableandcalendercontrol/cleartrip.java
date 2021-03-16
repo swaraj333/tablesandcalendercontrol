@@ -5,13 +5,15 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class cleartrip {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		WebDriver driver= new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.cleartrip.com/");
 		driver.findElement(By.xpath(".//*[@id='DepartDate']")).click();
 		String dateoffly="20-June-2019";

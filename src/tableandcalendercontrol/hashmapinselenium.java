@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.server.browserlaunchers.Sleeper;
 
 public class hashmapinselenium {
 
@@ -27,7 +26,7 @@ public class hashmapinselenium {
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.findElement(By.name("username")).sendKeys(getusername("customer"));
 		driver.findElement(By.name("password")).sendKeys(getpassword("customer")); 
-		Sleeper.sleepTightInSeconds(5);
+		
 		driver.findElement(By.xpath("//input[@class='btn btn-small']")).click();
 		
 		

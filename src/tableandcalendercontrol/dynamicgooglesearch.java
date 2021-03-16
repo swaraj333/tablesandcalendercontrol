@@ -14,7 +14,7 @@ public class dynamicgooglesearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver","C:/Users/swaraj/Downloads/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.co.in/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
